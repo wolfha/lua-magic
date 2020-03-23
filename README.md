@@ -4,7 +4,7 @@ Lua binding to libmagic to recognize the type of data in a file using "magic" nu
 
 ## Build Dependencies
 
-libmagic-dev liblua5.2-dev
+libmagic-dev liblua5.1-dev
 
 ## Usage Example
 
