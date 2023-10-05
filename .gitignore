@@ -1,4 +1,10 @@
 src/*.0
 src/*.so
 src/*.o
+debian/lua-magic/
+debian/lua-magic.substvars
+debian/lua-magic.debhelper.log
+debian/debhelper-build-stamp
+debian/files
+debian/.debhelper
 

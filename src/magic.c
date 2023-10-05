@@ -72,16 +72,43 @@ static int l_mime(lua_State *L)
     return 1;
 }
 
+// lua5.2 or newer
+#if LUA_VERSION_NUM >= 502
+static const struct luaL_Reg magic [] = {
+    {"mimetype", l_mime},
+    {"encoding", l_encoding},
+    {NULL, NULL}
+};
+#endif
+
+#if LUA_VERSION_NUM >= 502
+int luaopen_magic(lua_State *L) {
+    luaL_newlib(L, magic);
+    return 1;
+}
+#endif
+
+
+// 5.1
+#if LUA_VERSION_NUM == 501
+
 static const luaL_Reg lib[] = {
     {"mimetype", l_mime},
     {"encoding", l_encoding},
     {NULL, NULL}
 };
 
+#endif
+
+// 5.1
+#if LUA_VERSION_NUM == 501
 
 LUALIB_API int luaopen_magic(lua_State *L) {
     luaL_register(L, "magic", lib);
     //luaL_openlib(L, "magic", lib, 0);
     return 1;
 }
+
+
+#endif
 

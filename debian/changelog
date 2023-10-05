@@ -1,0 +1,6 @@
+lua-magic (0.1-1) unstable; urgency=low
+  * initial debian package
+
+ -- Wolfgang Hauptfleisch <dev@augmentedlogic.com>  Thu, 05 Oct 2023 12:30:00 +0000
+
+

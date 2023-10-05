@@ -1,0 +1,14 @@
+Source: lua-magic
+Section: utils
+Priority: optional
+Maintainer: augmentedlogic development <dev@augmentedlogic.com>
+Homepage: https://github.com/wolfha/lua-magic.git
+
+Package: lua-magic
+Architecture: any
+Section: utils
+Priority: optional
+Depends: lua, libmagic1
+Description: lua binding to libmagic
+ lua binding to libmagic to determine file type
+
