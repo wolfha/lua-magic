@@ -8,7 +8,7 @@ Package: lua-magic
 Architecture: any
 Section: utils
 Priority: optional
-Depends: lua, libmagic1
+Depends: libc6 (>= 2.27), libmagic1
 Description: lua binding to libmagic
  lua binding to libmagic to determine file type
 

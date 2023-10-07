@@ -5,6 +5,9 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 %:
 	dh $@
 
+override_dh_auto_build:
+	$(MAKE) all
+
 override_dh_link:
 	dh_link usr/lib/$(DEB_HOST_MULTIARCH)/liblua5.1-magic.so.0.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/lua/5.1/magic.so
 	dh_link usr/lib/$(DEB_HOST_MULTIARCH)/liblua5.1-magic.so.0.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/liblua5.1-magic.so.0
