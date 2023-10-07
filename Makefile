@@ -9,7 +9,7 @@ default:
 	gcc -fPIC -Wl,-soname,lib$(LUA)-magic.so.0 -Wall -lmagic -l$(LUA) -I/usr/include/$(LUA) src/lua-magic.o -o src/magic.so -shared
 
 
-all:
+deb:
 	$(eval LUA=lua5.1)
 	gcc -c -fPIC -Wno-implicit-function-declaration -Wall -lmagic -l$(LUA) -I/usr/include/$(LUA) src/magic.c -o src/lua-magic.o
 	gcc -fPIC -Wl,-soname,lib$(LUA)-magic.so.0 -Wall -lmagic -l$(LUA) -I/usr/include/$(LUA) src/lua-magic.o -o src/lib$(LUA)-magic.so.0.0.0 -shared
